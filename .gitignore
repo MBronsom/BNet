@@ -50,3 +50,6 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Esp-idf build folder
+/Firmware/ESP32s3-Project/build

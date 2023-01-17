@@ -1,0 +1,48 @@
+menu "Module PPPoS configuration"
+
+config PPPOS_DEBUG
+    bool "Enable PPPoS Client debugging"
+    default y
+    help
+        Show PPPoS Client debug messages
+
+config MODULE_TX
+    int "UART Output to Module"
+    default 17
+    range 1 30
+    help
+	UART Tx pin, connected to Module Rx pin.
+
+config MODULE_RX
+    int "UART Input from Module"
+    default 18
+    range 1 38
+    help
+	UART Rx pin, connected to Module Tx pin.
+
+config MODULE_BDRATE
+    int "UART Baud rate"
+    default 115200
+    help
+	UART baudrate to comunicate with GSM module
+
+config MODULE_INTERNET_USER
+    string "Internet User"
+	default ""
+	help
+		Network provider internet user.
+
+config MODULE_INTERNET_PASSWORD
+    string "Internet password"
+	default ""
+	help
+		Network provider internet password
+		
+config MODULE_APN
+    string "Internet APN"
+    default "providerAPN"
+    help
+       Network provider's APN for internet access
+
+endmenu
+
